@@ -1,0 +1,305 @@
+@charset "UTF-8";
+/**
+ * Yo框架动画解决方案
+ * Yo内置了超过60种动画形态，不同的动画可以任意组合
+ */
+.ani {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.ani.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+/**
+ * Yo框架动画解决方案
+ * Yo内置了超过60种动画形态，不同的动画可以任意组合
+ */
+.ani {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.ani.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+/**
+ * @module zoom
+ * @description 定义上升缩小退出动画
+ * @method zoom-out-up
+ */
+@-webkit-keyframes zoom-out-up {
+  40% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -2000px, 0);
+    -webkit-transform-origin: center bottom;
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+
+@keyframes zoom-out-up {
+  40% {
+    opacity: 1;
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  100% {
+    opacity: 0;
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -2000px, 0);
+    transform-origin: center bottom;
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+
+.ani.zoom-out-up {
+  -webkit-animation-name: zoom-out-up;
+  animation-name: zoom-out-up;
+}
+
+/**
+ * Yo框架动画解决方案
+ * Yo内置了超过60种动画形态，不同的动画可以任意组合
+ */
+.ani {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.ani.infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+
+/**
+ * @module other
+ * @description 定义脉冲动画
+ * @method pulse
+ */
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+.ani.pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  font-family: '微软雅黑';
+}
+
+.box {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background: #222222;
+  z-index: 9999;
+}
+
+.box .pic {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 100px;
+  width: 500px;
+  height: 293px;
+  background: url(../images/pic.png) no-repeat;
+  background-size: cover;
+}
+
+.box .start {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: 100px;
+  width: 200px;
+  height: 50px;
+  background: url(../images/start.png) no-repeat;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.scene {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  background: url(../images/6.jpg);
+}
+
+.scene .mask {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 900px;
+  height: 500px;
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.scene .mask #canvas {
+  border: 2px solid #000000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  background-image: url("../images/qpbg1.jpg");
+  background-size: cover;
+}
+
+.scene .mask .left {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  height: 400px;
+  left: 0;
+}
+
+.scene .mask .left .button {
+  width: 120px;
+  height: 45px;
+  background-image: url(../images/1.png);
+  background-size: 140px 80px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin: 30px auto 30px 30px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.scene .mask .left .button:hover {
+  color: indianred;
+}
+
+.scene .mask .right {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 0;
+}
+
+.scene .mask .right .qihe {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  right: -5px;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.scene .mask .right .black-box {
+  top: 10px;
+  background-image: url(../images/hei.png);
+}
+
+.scene .mask .right .white-box {
+  bottom: 10px;
+  background-image: url(../images/bai.png);
+}
+
+.scene .mask .right .time-box {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 0px;
+  width: 160px;
+  height: 80px;
+}
+
+.scene .mask .right .time-box span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 5px;
+  display: block;
+  width: 80px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 18px;
+}
+
+.scene .mask .right .time-box .clock {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: 0px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-right: 20px;
+  background-image: url(../images/clock.jpg);
+  background-size: 150px 150px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}

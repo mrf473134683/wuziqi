@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Five-in-row</title>
+    <script src="js/jquery.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+    <audio id="audio" src="1.mp3" autoplay></audio>
+    <div class="box ani">
+        <div class="pic"></div>
+        <div class="start"></div>
+    </div>
+    <div class="scene">
+        <div class="mask">
+            <canvas id="canvas" width="500" height="500"></canvas>
+            <div class="left">
+                <div class="computer button ani">人机对战</div>
+                <div class="person button ani">人人对战</div>
+                <div class="introduction button ani">游戏说明</div>
+                <div class="restart button ani">重新开始</div>
+                <div class="set button ani">退出游戏</div>
+            </div>
+            <div class="right">
+                <div class="black-box qihe"></div>
+                <div class="time-box">
+                    <span class="time"></span>
+                    <div class="clock"></div>
+                </div>
+                <div class="white-box qihe"></div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
